@@ -21,10 +21,15 @@ import "./utils/gestureHandler"
 import { useEffect, useState } from "react"
 import { useFonts } from "expo-font"
 import * as Linking from "expo-linking"
+import * as Notifications from "expo-notifications"
 import { KeyboardProvider } from "react-native-keyboard-controller"
 import { initialWindowMetrics, SafeAreaProvider } from "react-native-safe-area-context"
 
+import { NotificationProvider } from "@/context/NotificationContext"
+
 import { AuthProvider } from "./context/AuthContext"
+import { ConfirmationProvider } from "./context/ConfirmationContext"
+import { MessageProvider } from "./context/MessageContext"
 import { initI18n } from "./i18n"
 import { AppNavigator } from "./navigators/AppNavigator"
 import { useNavigationPersistence } from "./navigators/navigationUtilities"
@@ -32,6 +37,15 @@ import { ThemeProvider } from "./theme/context"
 import { customFontsToLoad } from "./theme/typography"
 import { loadDateFnsLocale } from "./utils/formatDate"
 import * as storage from "./utils/storage"
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldPlaySound: true,
+    shouldSetBadge: true,
+    shouldShowBanner: true,
+    shouldShowList: true,
+  }),
+})
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
 
@@ -98,11 +112,17 @@ export function App() {
       <KeyboardProvider>
         <AuthProvider>
           <ThemeProvider>
-            <AppNavigator
-              linking={linking}
-              initialState={initialNavigationState}
-              onStateChange={onNavigationStateChange}
-            />
+            <NotificationProvider>
+              <MessageProvider>
+                <ConfirmationProvider>
+                  <AppNavigator
+                    linking={linking}
+                    initialState={initialNavigationState}
+                    onStateChange={onNavigationStateChange}
+                  />
+                </ConfirmationProvider>
+              </MessageProvider>
+            </NotificationProvider>
           </ThemeProvider>
         </AuthProvider>
       </KeyboardProvider>

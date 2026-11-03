@@ -44,6 +44,11 @@ export interface ApiConfig {
   url: string
 
   /**
+   * The URL of the LogisT EMS api.
+   */
+  ems_url: string
+
+  /**
    * Milliseconds before we timeout the request.
    */
   timeout: number

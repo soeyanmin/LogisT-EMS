@@ -18,6 +18,7 @@ import type { ApiConfig, ApiFeedResponse } from "./types"
  */
 export const DEFAULT_API_CONFIG: ApiConfig = {
   url: Config.API_URL,
+  ems_url: Config.EMS_API_URL,
   timeout: 10000,
 }
 

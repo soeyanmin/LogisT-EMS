@@ -21,11 +21,12 @@ interface WelcomeScreenProps extends AppStackScreenProps<"Welcome"> {}
 export const WelcomeScreen: FC<WelcomeScreenProps> = function WelcomeScreen(_props) {
   const { themed, theme } = useAppTheme()
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { navigation } = _props
   const { logout } = useAuth()
 
   function goNext() {
-    navigation.navigate("Demo", { screen: "DemoShowroom", params: {} })
+    // navigation.navigate("Demo", { screen: "DemoShowroom", params: {} })
   }
 
   useHeader(

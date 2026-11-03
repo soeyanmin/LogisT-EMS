@@ -6,6 +6,8 @@ const en = {
     cancel: "Cancel",
     back: "Back",
     logOut: "Log Out",
+    contact: "Contact",
+    changePassword: "Change Password",
   },
   welcomeScreen: {
     postscript:
@@ -37,17 +39,31 @@ const en = {
     enterDetails:
       "Enter your details below to unlock top secret info. You'll never guess what we've got waiting. Or maybe you will; it's not rocket science here.",
     emailFieldLabel: "Email",
+    userIdFieldLabel: "User ID",
+    userIdFieldPlaceholder: "Enter your user id",
     passwordFieldLabel: "Password",
     emailFieldPlaceholder: "Enter your email address",
     passwordFieldPlaceholder: "Super secret password here",
     tapToLogIn: "Tap to log in!",
     hint: "Hint: you can use any email address and your favorite password :)",
+    orgName: "School Name",
+    orgNameFieldPlaceholder: "Enter your school name",
   },
   demoNavigator: {
     componentsTab: "Components",
     debugTab: "Debug",
     communityTab: "Community",
     podcastListTab: "Podcast",
+  },
+  emsNavigator: {
+    emsTab: "EMS",
+    homeTab: "Home",
+    communityTab: "Community",
+    profileTab: "Profile",
+    schoolTab: "About School",
+  },
+  profileScreen: {
+    title: "Profile",
   },
   demoCommunityScreen: {
     title: "Connect with the community",

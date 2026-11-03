@@ -7,4 +7,5 @@
  */
 export default {
   API_URL: "https://api.rss2json.com/v1/",
+  EMS_API_URL: "https://poppensolutions.com/sms-api/",
 }

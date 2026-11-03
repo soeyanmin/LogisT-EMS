@@ -5,9 +5,12 @@ const palette = {
   neutral400: "#B6ACA6",
   neutral500: "#978F8A",
   neutral600: "#564E4A",
-  neutral700: "#3C3836",
-  neutral800: "#191015",
-  neutral900: "#000000",
+  neutral700: "#1b5180",
+  neutral800: "#144e80",
+  neutral900: "#0f4c81",
+  //neutral700: "#3C3836",
+  //neutral800: "#191015",
+  //neutral900: "#000000",
 
   primary100: "#F4E0D9",
   primary200: "#E8C1B4",
@@ -66,10 +69,12 @@ export const colors = {
    * The main tinting color.
    */
   tint: palette.primary500,
+  tintEms: palette.neutral800,
   /**
    * The inactive tinting color.
    */
   tintInactive: palette.neutral300,
+  tintEmsInactive: palette.neutral300,
   /**
    * A subtle color used for lines.
    */

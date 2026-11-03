@@ -128,10 +128,17 @@ export const iconRegistry = {
   more: require("@assets/icons/more.png"),
   pin: require("@assets/icons/demo/pin.png"),
   podcast: require("@assets/icons/demo/podcast.png"),
+  school: require("@assets/icons/school.png"),
   settings: require("@assets/icons/settings.png"),
   slack: require("@assets/icons/demo/slack.png"),
   view: require("@assets/icons/view.png"),
   x: require("@assets/icons/x.png"),
+  email: require("@assets/icons/email.png"),
+  call: require("@assets/icons/call.png"),
+  fax: require("@assets/icons/fax.png"),
+  map: require("@assets/icons/map.png"),
+  key: require("@assets/icons/key.png"),
+  logout: require("@assets/icons/logout.png"),
 }
 
 const $imageStyleBase: ImageStyle = {

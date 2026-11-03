@@ -1,5 +1,5 @@
 {
-  "name": "LogisT-EMS",
+  "name": "LogisT EMS",
   "slug": "LogisT-EMS",
   "scheme": "logist-ems",
   "version": "1.0.0",
@@ -16,18 +16,32 @@
   ],
   "android": {
     "icon": "./assets/images/app-icon-android-legacy.png",
-    "package": "com.logistems",
+    "package": "com.logistems.mm",
     "adaptiveIcon": {
       "foregroundImage": "./assets/images/app-icon-android-adaptive-foreground.png",
       "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
     },
     "allowBackup": false,
-    "edgeToEdgeEnabled": true
+    "edgeToEdgeEnabled": true,
+    "googleServicesFile": "./google-services.json"
   },
   "ios": {
     "icon": "./assets/images/app-icon-ios.png",
     "supportsTablet": true,
-    "bundleIdentifier": "com.logistems"
+    "bundleIdentifier": "com.logistems.mm",
+    "privacyManifests": {
+      "NSPrivacyAccessedAPITypes": [
+        {
+          "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+          "NSPrivacyAccessedAPITypeReasons": [
+            "CA92.1"
+          ]
+        }
+      ]
+    },
+    "infoPlist": {
+      "ITSAppUsesNonExemptEncryption": false
+    }
   },
   "web": {
     "favicon": "./assets/images/app-icon-web-favicon.png",
@@ -35,6 +49,7 @@
   },
   "plugins": [
     "expo-localization",
+    "expo-notifications",
     "expo-font",
     [
       "expo-splash-screen",
@@ -42,7 +57,7 @@
         "image": "./assets/images/app-icon-android-adaptive-foreground.png",
         "imageWidth": 300,
         "resizeMode": "contain",
-        "backgroundColor": "#191015"
+        "backgroundColor": "#ffffff"
       }
     ],
     [
@@ -61,6 +76,9 @@
   "extra": {
     "ignite": {
       "version": "11.1.3"
+    },
+    "eas": {
+      "projectId": "fac4c63f-4c9b-4ce7-9ec2-f4edf2e0eca8"
     }
   }
 }
